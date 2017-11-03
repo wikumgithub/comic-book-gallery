@@ -10,16 +10,18 @@ namespace CommicBookGallery.Controllers
     {
         public ActionResult Details()
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
-            {
-                return Content("Hello,This is a commic book") ;
-            }
-            else
-            {
+            //if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            //{
+            //    return Content("Hello,This is a commic book") ;
+            //}
+            //else
+            //{
 
-                return new RedirectResult("/");
-            }
-                          
+            //    return new RedirectResult("/");
+            //}
+
+
+            return View();
         }
     }
 }
