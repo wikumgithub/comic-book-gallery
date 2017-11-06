@@ -11,7 +11,8 @@ namespace CommicBookGallery.Models
         public string SeriesTitle{ get; set; }
         public int IssueNumber { get; set; }
         public string DescriptionHtml { get; set; }
-        public  Artist[] artists{ get; set; }
+        public string Message { get; set; }
+        public  Artist[] Artists{ get; set; }
         public bool Favourite { get; set; }     
 
         public string DisplayText
