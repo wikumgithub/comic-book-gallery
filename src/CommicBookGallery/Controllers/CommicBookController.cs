@@ -20,6 +20,14 @@ namespace CommicBookGallery.Controllers
 
         }
 
+
+        public ActionResult Index()
+        {
+            var _commicBookList = _repository.GetCommicBookList();
+            return View(_commicBookList);
+        }
+
+
         public ActionResult Details(int? id)
         {
             if (id == null)

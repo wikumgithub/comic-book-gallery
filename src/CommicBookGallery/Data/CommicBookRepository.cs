@@ -82,5 +82,10 @@ namespace CommicBookGallery.Data
             return commicBookToReturn;
         }
 
+        public CommicBook[] GetCommicBookList()
+        {
+            return _CommicBook;
+        }
+
     }
 }
