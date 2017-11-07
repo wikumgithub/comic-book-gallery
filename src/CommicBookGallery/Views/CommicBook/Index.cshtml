@@ -1,0 +1,22 @@
+﻿@model CommicBookGallery.Models.CommicBook[]
+@{
+    ViewBag.Title = "Commic Book List";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+<div class="row">   
+    @foreach (var commicBook in Model)
+    {
+        <div class="col-md-3">
+            <h4>@commicBook.DisplayText</h4>
+            <img src="/Images/@commicBook.CoverImage"
+                 alt="@commicBook.DisplayText"
+                 class="img-responsive" />
+        </div>
+    }
+
+   
+</div>
