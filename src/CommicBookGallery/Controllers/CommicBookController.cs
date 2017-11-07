@@ -10,12 +10,29 @@ namespace CommicBookGallery.Controllers
 {
     public class CommicBookController:Controller
     {
-        public ActionResult Details()
-        {
-            CommicBookRepository repository = new CommicBookRepository();
-            repository.GetCommicBook(1);
+        private CommicBookRepository _repository;
 
-            return null;
+        
+
+        public CommicBookController()
+        {
+            _repository = new CommicBookRepository();
+
+        }
+
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+              var  _comicbook= _repository.GetCommicBook(id.Value);
+              return View(_comicbook);
+            }
+
+
         }
     }
 }
